@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - '10.5.0'
+
+script:
+  - npm run prod
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
